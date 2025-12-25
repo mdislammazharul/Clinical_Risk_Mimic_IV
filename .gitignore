@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data
+data/raw/
+data/interim/
+data/processed/
+data/splits/
+
+# Artifacts
+artifacts/
+mlruns/
+
+#docs
+docs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
