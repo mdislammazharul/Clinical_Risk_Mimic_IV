@@ -1,7 +1,7 @@
 dataset:
-  name: mimic-iv
+  name: mimiciii
   db_uri_env: MIMIC_DB_URI
   schema:
-    hosp: mimiciv_hosp
-    icu: mimiciv_icu
+    hosp: mimiciii
+    icu: mimiciii
   output_dir: data/processed

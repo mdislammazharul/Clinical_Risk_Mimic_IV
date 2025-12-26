@@ -1,7 +1,7 @@
 train:
   experiment_name: "icu_mortality_24h"
   target_col: "label"
-  id_cols: ["stay_id", "subject_id"]
+  id_cols: ["icustay_id", "subject_id"]
   time_col: "icu_intime"
   model_table_path: "data/processed/model_table_24h.parquet"
 
