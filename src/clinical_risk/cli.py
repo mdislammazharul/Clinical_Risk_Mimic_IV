@@ -9,9 +9,11 @@ from rich import print
 
 app = typer.Typer(add_completion=False, help="Clinical Risk CLI")
 
+
 def _ensure_dirs() -> None:
     Path("artifacts").mkdir(exist_ok=True)
     Path("data").mkdir(exist_ok=True)
+
 
 @app.command("doctor")
 def doctor():
@@ -27,11 +29,12 @@ def doctor():
     print("MIMIC_DB_URI set:", bool(db_uri))
     print("MLFLOW_TRACKING_URI:", mlflow_uri)
 
+    import mlflow  # noqa: F401
     import pandas  # noqa: F401
     import sklearn  # noqa: F401
-    import mlflow  # noqa: F401
 
     print("[bold green]Imports OK[/bold green]")
+
 
 @app.command("version")
 def version():
