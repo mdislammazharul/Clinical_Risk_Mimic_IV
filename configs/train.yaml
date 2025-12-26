@@ -1,0 +1,23 @@
+train:
+  experiment_name: "icu_mortality_24h"
+  target_col: "label"
+  id_cols: ["stay_id", "subject_id"]
+  time_col: "icu_intime"
+  model_table_path: "data/processed/model_table_24h.parquet"
+
+  models:
+    baseline_logreg:
+      enabled: true
+      C: 1.0
+      max_iter: 2000
+
+    lgbm:
+      enabled: true
+      num_leaves: 64
+      learning_rate: 0.05
+      n_estimators: 800
+      subsample: 0.8
+      colsample_bytree: 0.8
+
+mlflow:
+  tracking_uri_env: MLFLOW_TRACKING_URI

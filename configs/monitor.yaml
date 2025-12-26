@@ -1,0 +1,4 @@
+monitor:
+  reference_data_path: "data/processed/splits/train.parquet"
+  current_data_path: "data/processed/splits/test.parquet"
+  report_dir: "artifacts/monitoring"
